@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+{%block content%}
+<div class="container">
+      <h1>Akshay's Blog</h1>
+    {%for post in posts%}
+
+      <h2><a href="#">{{ post.title }}</a></h2>
+      <p id="para1">Published:{{post.published_date}}</p>
+      <p id="para2">{{post.snippest|linebreaksbr}}</p>
+    {% endfor %}
+</div>
+{%endblock%}
