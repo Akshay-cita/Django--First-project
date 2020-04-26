@@ -8,8 +8,10 @@ def index(request):
     my_dict={'posts':posts}
     return render(request,'index.html',context=my_dict)
 
-def blog_detail(request):
-    return HttpResponse()
+def blog_detail(request,slug):
+    # return HttpResponse(slug)
+    blog=Post.objects.get(slug=slug)
+    return render(request,'article_detail.html',{'blogs':blog})
 
 
 

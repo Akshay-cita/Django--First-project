@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<div class="article-detail">
+  <div class="article">
+    <h2>{{blogs.title}}</h2>
+      <p>Published:{{blogs.published_date}}</p>
+      <p>{{blogs.text|linebreaksbr}}</p>
+  </div>
+
+</div>
+{%endblock%}
