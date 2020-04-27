@@ -1,6 +1,22 @@
 {%extends 'base.html'%}
 
 {% block content %}
-<h1>SignUp</h1>
+<div class="container">
+  <div class="jumbotron">
+    <h3 id="head3">Please fill the form</h3>
+  </div>
+
+</div>
+
+<div class="container">
+  <form  method="post">
+    {%csrf_token%}
+    {{form.as_p}}
+    <input type="submit" class="btn btn-primary" value="save">
+  </form>
+
+
+
+</div>
 
 {% endblock %}
