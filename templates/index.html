@@ -8,6 +8,7 @@
       <h2><a href="{% url 'detail' slug=post.slug %}">{{ post.title }}</a></h2>
       <p id="para1">Published:{{post.published_date}}</p>
       <p id="para2">{{post.snippest|linebreaksbr}}</p>
+      <p><a href="{%url 'firstapp:signup'%}">sign up page</a></p>
     {% endfor %}
 </div>
 {%endblock%}
